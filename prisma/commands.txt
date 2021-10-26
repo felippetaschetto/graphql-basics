@@ -1,0 +1,7 @@
+# create db migrations
+npx prisma migrate dev
+npx prisma migrate dev -e ../config/dev.env
+
+# create client
+npx prisma generate
+

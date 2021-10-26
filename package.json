@@ -1,0 +1,43 @@
+{
+  "name": "basics",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "set NODE_ENV=dev&&nodemon --ext js,graphql --exec ./node_modules/.bin/babel-node src/index.js",
+    "test": "set NODE_ENV=test&&jest --detectOpenHandles --runInBand",
+    "test2": "set NODE_ENV=test&&nodemon --ext js,graphql --exec ./node_modules/.bin/babel-node src/index.js"
+  },
+  "jest": {
+    "globalSetup": "./test/jest/globalSetup.js",
+    "globalTeardown": "./test/jest/globalTeardown.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.8.4",
+    "@babel/node": "^7.8.4",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/polyfill": "^7.8.3",
+    "@babel/preset-env": "^7.8.4",
+    "@babel/register": "^7.8.3",
+    "@prisma/client": "^3.1.1",
+    "apollo-boost": "^0.4.9",
+    "bcryptjs": "^2.4.3",
+    "cross-fetch": "^3.1.4",
+    "dotenv": "^10.0.0",
+    "graphql": "^15.6.1",
+    "graphql-cli": "^4.1.0",
+    "graphql-yoga": "^1.18.3",
+    "jsonwebtoken": "^8.5.1",
+    "prisma": "^3.1.1",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.15.8",
+    "jest": "^27.3.1",
+    "nodemon": "^2.0.13"
+  }
+}
